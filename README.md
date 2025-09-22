@@ -22,3 +22,5 @@ The page includes a hero section with CTA, benefits slider, features grid, testi
 - **CSS3** (Flexbox, Grid, custom styles, transitions)
 - **Bootstrap 5** (responsive components, grid system, offcanvas)
 - **JavaScript ES6+** (form validation, slider, dynamic text, interactivity)
+
+DEMO: https://danielsabino-easywork.github.io/Landing-Digital-Product/
