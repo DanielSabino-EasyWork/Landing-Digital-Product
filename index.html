@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Landing page for a digital product (online course, mobile app, or ebook) with purchase/download CTAs." />
+  <title>Digital Product — Landing</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar with lateral offcanvas on mobile -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#" aria-label="Home">
+        <i class="bi bi-lightning-charge-fill text-brand"></i> Digital Product
+      </a>
+      <!-- Offcanvas toggler (mobile) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navOffcanvas" aria-controls="navOffcanvas" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Regular navbar (desktop) -->
+      <div class="collapse navbar-collapse d-none d-lg:flex" id="navDesktop">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-brand" href="#cta" role="button">Buy / Download</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas sidebar (mobile menu) -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="navOffcanvas" aria-labelledby="navOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="navOffcanvasLabel"><i class="bi bi-lightning-charge-fill text-brand me-1"></i> Digital Product</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item"><a class="nav-link" data-nav-close href="#benefits"><i class="bi bi-stars me-2"></i>Benefits</a></li>
+        <li class="nav-item"><a class="nav-link" data-nav-close href="#features"><i class="bi bi-grid me-2"></i>Features</a></li>
+        <li class="nav-item"><a class="nav-link" data-nav-close href="#pricing"><i class="bi bi-tag me-2"></i>Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" data-nav-close href="#faq"><i class="bi bi-question-circle me-2"></i>FAQ</a></li>
+      </ul>
+      <hr class="my-3" />
+      <a class="btn btn-brand w-100" data-nav-close href="#cta"><i class="bi bi-cart-check me-2"></i>Buy / Download</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero py-5 py-lg-6 bg-brand-soft">
+    <div class="container position-relative" style="z-index:1">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="badge text-bg-light border mb-2"><i class="bi bi-stars me-1"></i><span id="hero-badge">Online course</span> premium</span>
+          <h1 class="display-5 fw-bold lh-sm">Master <span class="text-brand" id="hero-keyword">your skill</span> with our <span id="hero-product">course</span> step by step</h1>
+          <p class="lead text-secondary">Practical, up-to-date content ready to use. Instant access, support, and community included.</p>
+          <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
+            <a href="#cta" class="btn btn-brand btn-lg"><i class="bi bi-cart-check me-2"></i><span id="cta-verb-1">Buy now</span></a>
+            <a href="#demo" class="btn btn-outline-dark btn-lg"><i class="bi bi-play-circle me-2"></i>Watch demo</a>
+          </div>
+          <div class="d-flex align-items-center gap-3 mt-3 text-secondary small">
+            <div><i class="bi bi-check2-circle text-success me-1"></i>Lifetime access</div>
+            <div><i class="bi bi-check2-circle text-success me-1"></i>Free updates</div>
+            <div><i class="bi bi-shield-check text-success me-1"></i>Secure payment</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="shadow-soft rounded-4 overflow-hidden bg-white">
+            <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1400&auto=format&fit=crop" alt="Digital product preview" class="w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Benefits (slider) -->
+  <section id="benefits" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 order-lg-2">
+          <div class="position-relative shadow-soft rounded-4 overflow-hidden slider-frame">
+            <div class="slide active"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1400&auto=format&fit=crop" alt="Learn at your pace" /></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1400&auto=format&fit=crop" alt="Apply what you learn" /></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=1400&auto=format&fit=crop" alt="Community and support" /></div>
+            <button id="prev" class="btn btn-light position-absolute top-50 start-0 translate-middle-y ms-2 shadow" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+            <button id="next" class="btn btn-light position-absolute top-50 end-0 translate-middle-y me-2 shadow" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fw-semibold mb-3">Real results in less time</h2>
+          <p class="text-secondary">Designed to maximize your learning and help you implement from day one.</p>
+          <ul class="list-unstyled fs-5">
+            <li class="d-flex align-items-start gap-2 mb-2"><i class="bi bi-check-circle-fill text-success"></i><span>Short, actionable lessons</span></li>
+            <li class="d-flex align-items-start gap-2 mb-2"><i class="bi bi-check-circle-fill text-success"></i><span>Downloadable templates & resources</span></li>
+            <li class="d-flex align-items-start gap-2 mb-2"><i class="bi bi-check-circle-fill text-success"></i><span>Email/Discord support</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features (Grid) -->
+  <section id="features" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-semibold">Everything you need</h2>
+        <p class="text-secondary">Key features that make this <span id="feat-product">course</span> stand out.</p>
+      </div>
+      <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div class="col">
+          <div class="card h-100 shadow-soft">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2"><i class="bi bi-journal-code fs-4 text-brand me-2"></i><h3 class="h5 m-0">Structured content</h3></div>
+              <p class="text-secondary">Curriculum organized by modules with clear goals and practical challenges.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-soft">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2"><i class="bi bi-phone fs-4 text-brand me-2"></i><h3 class="h5 m-0">Mobile access</h3></div>
+              <p class="text-secondary">Optimized for any screen. Learn from your phone or tablet.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-soft">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2"><i class="bi bi-cloud-arrow-down fs-4 text-brand me-2"></i><h3 class="h5 m-0">Downloadable resources</h3></div>
+              <p class="text-secondary">Includes roadmaps, checklists, and source files to speed up your progress.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-soft">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2"><i class="bi bi-people fs-4 text-brand me-2"></i><h3 class="h5 m-0">Community</h3></div>
+              <p class="text-secondary">Join a group of learners to share questions, achievements, and ideas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-soft">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2"><i class="bi bi-award fs-4 text-brand me-2"></i><h3 class="h5 m-0">Certificate</h3></div>
+              <p class="text-secondary">Get a digital certificate after completing modules and assessments.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-soft">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2"><i class="bi bi-shield-lock fs-4 text-brand me-2"></i><h3 class="h5 m-0">Secure payments</h3></div>
+              <p class="text-secondary">Encrypted processing and local/international payment options.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-5">
+          <h2 class="fw-semibold mb-3">What learners say</h2>
+          <p class="text-secondary">Real stories from people who implemented the content and saw measurable results.</p>
+        </div>
+        <div class="col-lg-7">
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <div class="border rounded-4 p-3 h-100 shadow-soft">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <img class="avatar" src="https://images.unsplash.com/photo-1548142813-c348350df52b?q=80&w=200&auto=format&fit=crop" alt="Avatar 1" />
+                  <div>
+                    <div class="fw-semibold">Laura S.</div>
+                    <div class="text-secondary small">Designer</div>
+                  </div>
+                </div>
+                <p class="mb-0">“I launched my first project in two weeks. The content is clear and straight to the point.”</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="border rounded-4 p-3 h-100 shadow-soft">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <img class="avatar" src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=200&auto=format&fit=crop" alt="Avatar 2" />
+                  <div>
+                    <div class="fw-semibold">Miguel A.</div>
+                    <div class="text-secondary small">Founder</div>
+                  </div>
+                </div>
+                <p class="mb-0">“The community and support made all the difference. Highly recommended.”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-semibold">Choose your plan</h2>
+        <p class="text-secondary">Simple, transparent pricing. No surprises.</p>
+      </div>
+      <div class="row g-4 row-cols-1 row-cols-lg-3">
+        <div class="col">
+          <div class="card h-100 border-0 shadow-soft">
+            <div class="card-body p-4">
+              <h3 class="h5">Basic</h3>
+              <div class="display-6 fw-bold">$19<span class="fs-6 text-secondary"> one-time</span></div>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li><i class="bi bi-check2 text-success me-1"></i>Access to core content</li>
+                <li><i class="bi bi-check2 text-success me-1"></i>Minor updates</li>
+              </ul>
+              <button class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#checkoutModal">Select</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 pricing-emphasis shadow-soft">
+            <div class="card-body p-4">
+              <div class="d-inline-block mb-2 badge text-bg-primary">Recommended</div>
+              <h3 class="h5">Pro</h3>
+              <div class="display-6 fw-bold">$49<span class="fs-6 text-secondary"> one-time</span></div>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li><i class="bi bi-check2 text-success me-1"></i>Everything in Basic</li>
+                <li><i class="bi bi-check2 text-success me-1"></i>Premium templates</li>
+                <li><i class="bi bi-check2 text-success me-1"></i>Priority support</li>
+              </ul>
+              <button class="btn btn-brand w-100" data-bs-toggle="modal" data-bs-target="#checkoutModal">Select</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-soft">
+            <div class="card-body p-4">
+              <h3 class="h5">Team</h3>
+              <div class="display-6 fw-bold">$149<span class="fs-6 text-secondary"> one-time</span></div>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li><i class="bi bi-check2 text-success me-1"></i>5 licenses</li>
+                <li><i class="bi bi-check2 text-success me-1"></i>Private Q&A session</li>
+              </ul>
+              <button class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#checkoutModal">Select</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="fw-semibold">Ready to start?</h2>
+          <p class="text-secondary">Fill out the form to purchase or receive the download link by email.</p>
+        </div>
+        <div class="col-lg-6">
+          <form id="ctaForm" class="p-4 border rounded-4 shadow-soft bg-white" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input id="name" name="name" type="text" class="form-control" placeholder="Your name" required />
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="email" class="form-control" placeholder="you@example.com" required />
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <div class="col-12">
+                <label for="productType" class="form-label">Product type</label>
+                <select id="productType" class="form-select" required>
+                  <option value="course" selected>Online course</option>
+                  <option value="app">Mobile app</option>
+                  <option value="ebook">eBook</option>
+                </select>
+                <div class="invalid-feedback">Please choose an option.</div>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message (optional)</label>
+                <textarea id="message" class="form-control" rows="3" placeholder="Any questions?"></textarea>
+              </div>
+              <div class="col-12 d-grid d-sm-flex gap-2">
+                <button class="btn btn-brand" type="submit"><i class="bi bi-bag-check me-1"></i> Complete purchase</button>
+                <button class="btn btn-outline-secondary" type="button" id="btnDownload"><i class="bi bi-cloud-download me-1"></i> Try download</button>
+              </div>
+              <p id="formStatus" class="small text-success m-0" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-5 bg-light faq">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-semibold">Frequently asked questions</h2>
+      </div>
+      <div class="accordion" id="faqAcc">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q1"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">How do I get access?</button></h2>
+          <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+            <div class="accordion-body">You will receive an email with an access/download link immediately after payment.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">Is there a guarantee?</button></h2>
+          <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body">Yes, a 7‑day guarantee. If you’re not satisfied, we’ll refund your purchase.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">Updates?</button></h2>
+          <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body">You’ll get future updates at no extra cost.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checkout Modal (demo) -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="bi bi-lock-fill me-2"></i>Confirm secure payment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This is a demo payment flow. Integrate your preferred gateway here (Stripe, PayPal, AZUL, etc.).</p>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="terms" />
+            <label class="form-check-label" for="terms">I accept the terms and conditions.</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" id="btnPay" class="btn btn-brand" disabled>Pay now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-4 border-top">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
+      <div class="text-secondary">© <span id="year"></span> Your Brand. All rights reserved.</div>
+      <div class="d-flex gap-3">
+        <a href="#" class="text-secondary">Privacy</a>
+        <a href="#" class="text-secondary">Terms</a>
+        <a href="#" class="text-secondary">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Interactivity ES6+ -->
+  <script src="scrips.js"></script>
+</body>
+</html>

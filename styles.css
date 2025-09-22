@@ -1,0 +1,42 @@
+:root{
+      --brand:#4f46e5; /* indigo-600 */
+      --brand-hover:#4338ca; /* darker indigo */
+      --brand-2:#22c55e; /* green-500 */
+    }
+    body{ font-feature-settings:"ss01" on, "liga" on; }
+
+    /* Buttons & links hover */
+    .btn-brand{ background:var(--brand); color:#fff; border:none; transition:transform .15s ease, box-shadow .2s ease, background .2s ease; }
+    .btn-brand:hover{ background:var(--brand-hover); color:#fff; transform:translateY(-1px); box-shadow:0 8px 20px rgba(67,56,202,.35); }
+    .btn-outline-dark:hover{ transform:translateY(-1px); }
+    .nav-link{ position:relative; transition:color .15s ease; }
+    .nav-link::after{ content:""; position:absolute; left:0; right:0; bottom:.2rem; height:2px; background:currentColor; transform:scaleX(0); transform-origin:left; transition:transform .2s ease; opacity:.6; }
+    .nav-link:hover::after{ transform:scaleX(1); }
+
+    .text-brand{ color:var(--brand); }
+    .bg-brand-soft{ background:rgba(79,70,229,.06); }
+
+    /* Hero */
+    .hero{ position:relative; overflow:hidden; }
+    .hero::after{ content:""; position:absolute; inset:-20% -10% auto auto; width:520px; height:520px; background:radial-gradient(ellipse at center, rgba(79,70,229,.15), transparent 60%); filter:blur(8px); z-index:0; }
+
+    /* Cards hover */
+    .shadow-soft{ box-shadow:0 10px 30px rgba(0,0,0,.08); transition:transform .2s ease, box-shadow .2s ease; }
+    .card.shadow-soft:hover{ transform:translateY(-4px); box-shadow:0 16px 40px rgba(0,0,0,.12); }
+    .pricing-emphasis{ border:2px solid var(--brand) !important; }
+    .pricing-emphasis:hover{ box-shadow:0 16px 44px rgba(79,70,229,.25); }
+
+    /* Slider — consistent size */
+    .slider-frame{ position:relative; width:100%; aspect-ratio:16/9; background:#000; }
+    .slide{ position:absolute; inset:0; display:none; }
+    .slide.active{ display:block; }
+    .slide img{ width:100%; height:100%; object-fit:cover; }
+
+    /* Testimonial avatar */
+    .avatar{ width:48px; height:48px; border-radius:50%; object-fit:cover; }
+
+    /* FAQ */
+    .faq .accordion-button:not(.collapsed){ color:var(--brand); background:rgba(79,70,229,.05); }
+
+    /* Footer */
+    footer a{ text-decoration:none; }
